@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laura Félix | Creadora Digital</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!--favicon-->
+   <link rel="icon" type="image" href="/images/favicon.png"/>
+</head>
+
+<body>
+  <!-- Navegación -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#" class="active">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#certifications">Certificaciones</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+
+       <!-- Selector de idioma -->
+    <div class="lang-switch">
+      <a href="es.html">ES</a> |
+      <a href="index.html">EN</a>
+    </div>
+    </nav>
+  </header>
+
+  <!-- Sección Principal -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Hola, soy</h2>
+      <h1 class="name">Laura <span>Félix</span></h1>
+      <h3>Soy <span id="typed-text"></span><span class="cursor">|</span></h3>
+      <p>
+        Creando experiencias digitales que combinan precisión técnica con visión creativa. 
+        Desarrollo aplicaciones modernas y creo arte digital que supera los límites.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary">Ver mis proyectos</a>
+        <a href="#contact" class="btn secondary">Contactar</a>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://github.com/laufr14" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/laura-félix-87ba612b4" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre mí -->
+  <section class="about" id="about">
+    <h2 class="section-title">Sobre <span>Mí</span></h2>
+
+    <div class="about-container">
+      <div class="about-img">
+        <img src="/images/imagen-cv.jpg" alt="Laura Felix">
+      </div>
+
+      <div class="about-content">
+        <h3>Desarrolladora Apasionada & Visionaria Creativa</h3>
+
+        <p>
+          Soy desarrolladora full-stack y creadora digital apasionada por diseñar 
+          soluciones innovadoras que combinan funcionalidad y expresión artística.
+          Mi trayectoria comenzó con curiosidad y ha evolucionado hacia una misión:
+          crear experiencias digitales significativas.
+        </p>
+
+        <p>
+          Cuando no estoy programando, me gusta explorar nuevas tendencias de diseño, 
+          experimentar con arte digital y colaborar en proyectos de código abierto. 
+          Creo firmemente en el poder de la tecnología para transformar ideas en realidad.
+        </p>
+
+        <div class="skills-tags">
+          <span>React Native</span>
+          <span>JavaScript</span>
+          <span>Node.js</span>
+          <span>Python</span>
+          <span>Diseño UI/UX</span>
+          <span>Arte Digital</span>
+        </div>
+        <a href="#" onclick="openForm()" class="btn primary download-btn">Solicitar CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section class="projects" id="projects">
+    <h2 class="section-title">Mis <span>Proyectos</span></h2>
+    <p class="section-subtitle">
+      Una colección de mis trabajos recientes que muestran distintas tecnologías y soluciones creativas.
+    </p>
+
+    <div class="project-filters">
+      <button class="filter active" data-filter="all">Todos</button>
+      <button class="filter">Desarrollo Web</button>
+      <button class="filter" data-filter="mobile">Aplicaciones Móviles</button>
+      <button class="filter" data-filter="analysis">Análisis de datos</button>
+    </div>
+
+    <div class="projects-grid">
+      <!-- PROYECTO 1 -->
+    <div class="project-card" data-category="analysis">
+      <img src="/images/analisis-datos.png" alt="Proyecto de análisis de datos">
+      <div class="project-info">
+        <h3>Análisis de la Historia del Desempeño de Ventas</h3>
+        <p>
+          Examiné la eficacia de la colocación de productos en ventas utilizando PostgreSQL para detectar tendencias y patrones, 
+          lo que resultó en una comprensión acelerada del 20% en el rendimiento de ventas.
+        </p>
+        <div class="tech-tags">
+          <span>Excel</span> <span>PostgreSQL</span> <span>Tableau</span>
+        </div>
+        <div class="project-buttons">
+          <a href="https://public.tableau.com/views/SalesPerformanceAnalysisStory/SalesPerformanceAnalysis?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="btn primary">Live Demo</a>
+          <a href="https://github.com/laufr14/retail-sales-analysis" target="_blank" class="btn secondary">Ver Código</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO 2 -->
+    <div class="project-card" data-category="mobile">
+      <img src="/images/control-gastos.png" alt="App de control de gastos">
+      <div class="project-info">
+        <h3>App de Control de Gastos</h3>
+        <p>
+         Aplicación de control de gastos que registra ingresos y gastos, genera reportes y muestra estadísticas en tiempo real para mejorar la gestión financiera personal.
+        </p>
+        <div class="tech-tags">
+          <span>Java</span> <span>SQLite</span> <span>Android Studio</span>
+        </div>
+        <div class="project-buttons">
+          <a class="btn secondary">En Desarrollo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROYECTO 3 -->
+    <div class="project-card" data-category="mobile">
+      <img src="/images/lista-tareas.png" alt="App de lista de tareas">
+      <div class="project-info">
+        <h3>App de Lista de Tareas</h3>
+        <p>
+          Aplicación sencilla e intuitiva que permite crear, marcar y eliminar tareas. 
+          Diseñada con un enfoque minimalista para mejorar la productividad y la organización personal.
+        </p>
+        <div class="tech-tags">
+          <span>Flutter</span> <span>Dart</span>
+        </div>
+        <div class="project-buttons">
+          <a class="btn secondary">En Desarrollo</a>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+
+<!-- Habilidades -->
+  <section class="skills" id="skills">
+    <h2 class="section-title">Mis <span>Habilidades</span></h2>
+    <p class="skills-subtitle">
+      Una visión general de mis competencias técnicas y creativas.
+    </p>
+
+    <div class="skills-container">
+      <!-- Frontend -->
+     <div class="skill-card">
+      <div class="skill-header">
+        <div class="skill-icon">
+          💻
+        </div>
+        <h3>Desarrollo Frontend</h3>
+      </div>
+
+      <div class="skill-bar">
+        <p>CSS <span>90%</span></p>
+        <div class="bar"><span style="width: 90%;"></span></div>
+      </div>
+
+      <div class="skill-bar">
+        <p>JavaScript <span>80%</span></p>
+        <div class="bar"><span style="width: 80%;"></span></div>
+      </div>
+
+      <div class="skill-bar">
+        <p>React <span>60%</span></p>
+        <div class="bar"><span style="width: 60%;"></span></div>
+      </div>
+
+      <div class="skill-bar">
+        <p>Flutter <span>55%</span></p>
+        <div class="bar"><span style="width: 55%;"></span></div>
+      </div>
+    </div>
+
+    <!-- BACKEND -->
+    <div class="skill-card">
+      <div class="skill-header">
+        <div class="skill-icon">
+          🗄️
+        </div>
+        <h3>Desarrollo Backend</h3>
+      </div>
+
+      <div class="skill-bar">
+        <p>Java <span>88%</span></p>
+        <div class="bar"><span style="width: 88%;"></span></div>
+      </div>
+
+      <div class="skill-bar">
+        <p>Python <span>85%</span></p>
+        <div class="bar"><span style="width: 85%;"></span></div>
+      </div>
+
+      <div class="skill-bar">
+        <p>SQL Server <span>80%</span></p>
+        <div class="bar"><span style="width: 80%;"></span></div>
+      </div>
+
+      <div class="skill-bar">
+        <p>PostgreSQL <span>83%</span></p>
+        <div class="bar"><span style="width: 83%;"></span></div>
+      </div>
+
+      <div class="skill-bar">
+        <p>MySQL <span>82%</span></p>
+        <div class="bar"><span style="width: 82%;"></span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Certificaciones -->
+  <section class="certifications" id="certifications">
+    <h2 class="section-title">Certificaciones y Logros</h2>
+
+    <div class="certifications-container">
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fa-brands fa-aws"></i></div>
+        <h3>Desarrolladora Certificada AWS</h3>
+        <p>Amazon Web Services</p>
+        <span>En progreso</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
+        <h3>Analista de Datos Asociada en SQL</h3>
+        <p>Datacamp</p>
+        <span>2024</span>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-icon">
+               <i class="fa-brands fa-meta"></i>
+        </div>
+        <h3>Copilot en Teams: Colaboración Impulsada por IA</h3>
+        <p>Meta</p>
+        <span>2023</span>
+      </div>
+    </div>
+  </section>
+
+  <!--  SECCIÓN DE CONTACTO -->
+<section class="contact" id="contact">
+  <h2 class="section-title">Ponte en <span>Contacto</span></h2>
+  <p class="contact-subtitle">
+    ¿Lista para dar vida a tus ideas? Hablemos sobre tu próximo proyecto y creemos algo increíble juntas/os.
+  </p>
+
+  <div class="contact-container">
+
+    <!-- COLUMNA IZQUIERDA - INFO -->
+    <div class="contact-info">
+      <h3>Conectemos</h3>
+      <p>
+        Actualmente estoy trabajando en varios proyectos que combinan creatividad y tecnología.  
+        Siempre estoy abierta a colaborar con otras mentes apasionadas — tanto si tienes una idea concreta 
+        como si quieres explorar nuevas posibilidades, me encantaría conectar y crear algo extraordinario.
+      </p>
+
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-details">
+            <h4>Email</h4>
+            <p>laurafelixr@outlook.com</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="contact-details">
+            <h4>Teléfono</h4>
+            <p>+34 634-297-950</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contact-details">
+            <h4>Ubicación</h4>
+            <p>Pamplona, España</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-calendar"></i></div>
+          <div class="contact-details">
+            <h4>Disponibilidad</h4>
+            <p>Inmediata</p>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="follow-title">Sígueme</h4>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/laura-félix-87ba612b4" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/laufr14" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+
+    <!-- COLUMNA DERECHA - FORMULARIO -->
+    <div class="contact-form">
+      <h3>Enviar Mensaje</h3>
+      <form id="contactForm">
+        <div class="form-group">
+          <div>
+            <label>Nombre Completo *</label>
+            <input type="text" name="name" placeholder="Tu nombre completo" required minlenght="2">
+            
+          </div>
+          <div>
+            <label>Correo Electrónico *</label>
+            <input type="email" name="email" placeholder="tu.email@ejemplo.com" required>
+          
+          </div>
+        </div>
+
+        <label>Asunto *</label>
+        <input type="text" name="subject" placeholder="¿Sobre qué trata?" required>
+        
+
+        <label>Mensaje *</label>
+        <textarea name="message" placeholder="Cuéntame sobre tu proyecto o idea..." maxlength="500" required></textarea>
+      
+        <p class="char-count">0/500 caracteres</p>
+
+        <button type="submit" class="btn primary">Enviar Mensaje</button>
+      </form>
+
+      <!-- ⭐MENSAJE DE ÉXITO (AQUÍ) -->
+  <div id="contactSuccess" class="success-box">
+
+    <div class="success-icon">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+
+    <h3>Mensaje enviado</h3>
+
+    <p>
+      Gracias por tu interés. Agradezco que te hayas puesto en contacto conmigo y responderé lo antes posible.
+    </p>
+
+    <button onclick="resetContactForm()" class="btn primary">
+      Cerrar
+    </button>
+
+  </div>
+    </div>
+
+  </div>
+</section>
+
+<!--  Footer  -->
+<footer class="footer">
+  <p>© 2025 Laura Felix. Todos los derechos reservados.</p>
+</footer>
+
+
+<!-- FORMULARIO EMERGENTE CV -->
+<div id="cvForm" class="modal">
+
+  <div class="modal-content">
+
+    <!-- FORMULARIO -->
+    <form id="resumeForm">
+
+      <h3>Solicitar CV</h3>
+      <p>Introduce tus datos profesionales para solicitar el CV completo.</p>
+
+      <input type="text" name="name" placeholder="Nombre completo" required>
+
+      <input type="email" name="email" placeholder="Email profesional" required>
+
+      <input type="text" name="company" placeholder="Empresa" required>
+
+      <input type="text" name="position" placeholder="Cargo / Rol" required>
+
+      <textarea name="message" placeholder="Motivo del contacto (opcional)"></textarea>
+
+      <div class="modal-buttons">
+        <button type="submit">Solicitar CV</button>
+        <button type="button" onclick="closeForm()">Cancelar</button>
+      </div>
+       
+    </form>
+
+    <!-- MENSAJE ÉXITO -->
+  <div id="successMessage" class="success-box">
+
+  <div class="success-icon">
+    <i class="fa-solid fa-circle-check"></i>
+  </div>
+
+  <h3>Solicitud enviada</h3>
+
+  <p>
+    Gracias por tu interés. Me alegra que te hayas puesto en contacto conmigo y responderé lo antes posible.
+  </p>
+
+  <button onclick="closeForm()" class="btn primary">
+    Cerrar
+  </button>
+
+</div>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

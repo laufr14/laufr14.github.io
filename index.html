@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laura Felix | Digital Creator</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!--favicon-->
+  <link rel="icon" type="image" href="/images/favicon.png"/>
+  
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+     <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Selector de idioma -->
+    <div class="lang-switch">
+      <a href="es.html">ES</a> |
+      <a href="index.html">EN</a>
+    </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Hi, I'm</h2>
+      <h1 class="name">Laura <span>Felix</span></h1>
+      <h3>I'm a <span id="typed-text"></span><span class="cursor">|</span></h3>
+      <p>
+    I design and develop dynamic, responsive applications that merge technical excellence with creative storytelling.  
+  Passionate about building clean interfaces, efficient code, and digital experiences that connect people and technology.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary">View My Work</a>
+        <a href="#contact" class="btn secondary">Get In Touch</a>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://github.com/laufr14" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/laura-félix-87ba612b4" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!--About Section-->
+  <section class="about" id="about">
+  <h2 class="section-title">About <span>Me</span></h2>
+
+  <div class="about-container">
+
+    <!-- About Image -->
+    <div class="about-img">
+      <img src="/images/imagen-cv.jpg" alt="Laura Felix">
+    </div>
+
+    <!-- About Content -->
+    <div class="about-content">
+      <h3>Passionate Developer & Creative Visionary</h3>
+
+      <p>
+        I'm a full-stack developer and digital creator passionate about crafting 
+        innovative solutions that blend functionality with artistic expression.
+        My journey began with curiosity and evolved into a mission to create
+        meaningful digital experiences.
+      </p>
+
+      <p>
+        When I'm not coding, I explore new design trends, experiment with
+        digital art, and contribute to open-source projects. I truly believe in
+        the power of technology to transform ideas into reality.
+      </p>
+
+      <div class="skills-tags">
+        <span>React Native</span>
+        <span>JavaScript</span>
+        <span>Node.js</span>
+        <span>Python</span>
+        <span>UI/UX Design</span>
+        <span>Digital Art</span>
+      </div>
+
+       <a href="#" onclick="openForm()" class="btn primary download-btn">Request CV</a>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects" id="projects">
+  <h2 class="section-title">My <span>Projects</span></h2>
+  <p class="section-subtitle">
+    A collection of my recent work showcasing technologies and creative solutions.
+  </p>
+
+  <!-- Filters -->
+  <div class="project-filters">
+    <button class="filter active" data-filter="all">All Projects</button>
+    <button class="filter" data-filter="web">Web Development</button>
+    <button class="filter" data-filter="mobile">Mobile Apps</button>
+    <button class="filter" data-filter="analysis">Data Analysis</button>
+  </div>
+
+  <!-- Project Cards -->
+  <div class="projects-grid">
+
+    <!-- Project 1 -->
+    <div class="project-card" data-category="analysis">
+      <img src="/images/analisis-datos.png" alt="Sales Performance Analysis">
+      <div class="project-info">
+        <h3>Sales Performance History Analysis</h3>
+        <p>Analyzed product placement using PostgreSQL to identify sales trends, improving sales performance insights by 20%</p>
+        <div class="tech-tags">
+          <span>Excel</span> <span>PostgreSQL</span> <span>Tableau</span>
+        </div>
+
+        <div class="project-buttons">
+          <a href="https://public.tableau.com/views/SalesPerformanceAnalysisStory/SalesPerformanceAnalysis?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank" class="btn primary">Live Demo</a>
+          <a href="https://github.com/laufr14/retail-sales-analysis" target="_blank" class="btn secondary">Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card" data-category="mobile">
+      <img src="/images/control-gastos.png" alt="Expense Tracking App">
+      <div class="project-info">
+        <h3>Expense Tracking App</h3>
+        <p>App that records income and expenses, generates reports, and displays real-time statistics to improve personal finance management.</p>
+        <div class="tech-tags">
+          <span>Java</span> <span>SQLite</span> <span>Android Studio</span>
+        </div>
+
+        <div class="project-buttons">
+          <a class="btn secondary">In progress</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card" data-category="mobile">
+      <img src="/images/lista-tareas.png" alt="Task Management App">
+      <div class="project-info">
+        <h3>Task Management App</h3>
+        <p>Cross-platform productivity app with real-time sync.</p>
+        <div class="tech-tags">
+          <span>React Native</span> <span>Firebase</span>
+        </div>
+
+        <div class="project-buttons">
+          <a class="btn secondary">In progress</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--Skills Section-->
+
+<section class="skills" id="skills">
+
+  <h2 class="section-title">My <span>Skills</span></h2>
+  <p class="skills-subtitle">
+    A comprehensive overview of my technical expertise and creative abilities
+  </p>
+
+  <div class="skills-container">
+
+    <!-- Frontend Skills -->
+<div class="skill-card">
+  <div class="skill-header">
+    <div class="skill-icon">
+      <i class="fa-solid fa-laptop-code"></i>
+    </div>
+    <h3>Frontend Development</h3>
+  </div>
+
+  <div class="skill-bar">
+    <p>CSS <span>90%</span></p>
+    <div class="bar"><span style="width: 90%;"></span></div>
+  </div>
+
+  <div class="skill-bar">
+    <p>JavaScript <span>80%</span></p>
+    <div class="bar"><span style="width: 80%;"></span></div>
+  </div>
+
+  <div class="skill-bar">
+    <p>React <span>60%</span></p>
+    <div class="bar"><span style="width: 60%;"></span></div>
+  </div>
+
+  <div class="skill-bar">
+    <p>Flutter <span>55%</span></p>
+    <div class="bar"><span style="width: 55%;"></span></div>
+  </div>
+</div>
+
+
+    <!-- Backend Skills -->
+<div class="skill-card">
+  <div class="skill-header">
+    <div class="skill-icon">
+      <i class="fa-solid fa-server"></i>
+    </div>
+    <h3>Backend Development</h3>
+  </div>
+
+  <div class="skill-bar">
+    <p>Java <span>88%</span></p>
+    <div class="bar"><span style="width: 88%;"></span></div>
+  </div>
+
+  <div class="skill-bar">
+    <p>Python <span>85%</span></p>
+    <div class="bar"><span style="width: 85%;"></span></div>
+  </div>
+
+  <div class="skill-bar">
+    <p>SQL Server <span>80%</span></p>
+    <div class="bar"><span style="width: 80%;"></span></div>
+  </div>
+
+  <div class="skill-bar">
+    <p>PostgreSQL <span>83%</span></p>
+    <div class="bar"><span style="width: 83%;"></span></div>
+  </div>
+
+  <div class="skill-bar">
+    <p>MySQL <span>82%</span></p>
+    <div class="bar"><span style="width: 82%;"></span></div>
+  </div>
+</div>
+
+
+  </div>
+
+</section>
+
+<!--Certifications-->
+<section class="certifications" id="certifications">
+  <h2 class="section-title">Certifications & Achivements</h2>
+
+  <div class="certifications-container">
+
+    <!-- CERT 1 -->
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fa-brands fa-aws"></i></div>
+      <h3>AWS Certified Developer</h3>
+      <p>Amazon Web Services</p>
+      <span>In progress</span>
+    </div>
+
+    <!-- CERT 2 -->
+    <div class="cert-card">
+      <div class="cert-icon"><i class="fa-solid fa-database"></i>
+      </div>
+      <h3>Associate Data Analyst in SQL</h3>
+      <p>Datacamp</p>
+      <span>2024</span>
+    </div>
+
+    <!-- CERT 3 -->
+    <div class="cert-card">
+      <div class="cert-icon">
+        <i class="fa-brands fa-meta"></i>
+      </div>
+      <h3>Copilot in Teams: AI-Powered Collaboration</h3>
+      <p>Meta</p>
+      <span>2023</span>
+    </div>
+
+  </div>
+</section>
+
+ 
+ <!--  Contact Section  -->
+<section class="contact" id="contact">
+  <h2 class="section-title">Get In <span>Touch</span></h2>
+  <p class="contact-subtitle">
+    Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
+  </p>
+
+  <div class="contact-container">
+
+    <!-- LEFT SIDE - INFO -->
+    <div class="contact-info">
+      <h3>Let's Connect</h3>
+      <p>
+        I'm currently working on several exciting projects that combine creativity and technology. 
+  I'm always open to collaborating with other passionate minds — whether you have a specific idea in mind 
+  or just want to explore new possibilities, I'd love to connect and create something amazing together.
+      </p>
+
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="contact-details">
+            <h4>Email</h4>
+            <p>laurafelixr@outlook.com</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="contact-details">
+            <h4>Phone</h4>
+            <p>+34 634-297-950</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contact-details">
+            <h4>Location</h4>
+            <p>Pamplona, Spain</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fa-solid fa-calendar"></i></div>
+          <div class="contact-details">
+            <h4>Availability</h4>
+            <p>Immediate</p>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="follow-title">Follow Me</h4>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/laura-félix-87ba612b4" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/laufr14" target="_blank"><i class="fab fa-github"></i></a>
+       </div>
+    </div>
+
+    <!-- Right side - Form -->
+    <div class="contact-form">
+      <h3>Send Message</h3>
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <div>
+            <label>Full Name *</label>
+            <input type="text" name="name" placeholder="Your full name" required minlength="2">
+            
+          </div>
+          <div>
+            <label>Email Address *</label>
+            <input type="email" name="email" placeholder="your.email@example.com" required>
+            
+          </div>
+        </div>
+
+        <label>Subject *</label>
+        <input type="text" name="subject" placeholder="What's this about?" required>
+       
+
+        <label>Message *</label>
+        <textarea name="message" placeholder="Tell me about your project or idea..." maxlength="500" required></textarea>
+       
+        <p class="char-count">0/500 characters</p>
+
+        <button type="submit" class="btn primary">Send Message</button>
+      </form>
+       <!-- Success message -->
+  <div id="contactSuccess" class="success-box">
+
+    <div class="success-icon">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+
+    <h3>Message Sent</h3>
+
+    <p>
+      Thank you for your interest. I appreciate you reaching out and will reply as soon as possible.
+    </p>
+
+    <button onclick="resetContactForm()" class="btn primary">
+      Close
+    </button>
+
+  </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2025 Laura Felix. All rights reserved.</p>
+</footer>
+
+<!-- FORMULARIO EMERGENTE CV -->
+<div id="cvForm" class="modal">
+
+  <div class="modal-content">
+
+    <!-- FORMULARIO -->
+    <form id="resumeForm">
+
+      <h3>Request Resume</h3>
+      <p>Enter your professional details to request the complete CV.</p>
+
+      <input type="text" name="name" placeholder="Full Name" required>
+
+      <input type="email" name="email" placeholder="Professional Email" required>
+
+      <input type="text" name="company" placeholder="Company" required>
+
+      <input type="text" name="position" placeholder="Position / Role" required>
+
+      <textarea name="message" placeholder="Reason for contact (optional)"></textarea>
+
+      <div class="modal-buttons">
+        <button type="submit">Request CV</button>
+        <button type="button" onclick="closeForm()">Cancel</button>
+      </div>
+
+    </form>
+
+    <!-- Success Message -->
+  <div id="successMessage" class="success-box">
+
+  <div class="success-icon">
+    <i class="fa-solid fa-circle-check"></i>
+  </div>
+
+  <h3>Request sent</h3>
+
+  <p>
+    Thank you for your interest. I appreciate you reaching out and will reply as soon as possible.
+</p>
+
+  <button onclick="closeForm()" class="btn primary">
+    Close
+  </button>
+
+</div>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script src="/js/script.js"></script>
+
+</body>
+</html>
