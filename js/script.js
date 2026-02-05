@@ -164,7 +164,7 @@ document.getElementById("contactForm")
 });
 
 
-// ===== FUNCIÓN RESET =====
+//FUNCIÓN RESET 
 function resetContactForm(){
 
   document.getElementById("contactForm").reset();
@@ -172,3 +172,41 @@ function resetContactForm(){
   document.getElementById("contactSuccess").style.display = "none";
 
 }
+
+//BURGER MENU 
+
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const navItems = document.querySelectorAll(".nav-links a");
+
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("active");
+  navLinks.classList.toggle("active");
+
+  // Bloquear el scroll cuando el menú está abierto
+  document.body.classList.toggle("menu-open");
+});
+
+
+navItems.forEach(link => {
+  link.addEventListener("click", () => {
+    menuToggle.classList.remove("active");
+    navLinks.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  });
+});
+
+document.addEventListener("click", (e) => {
+
+  if (
+    navLinks.classList.contains("active") &&
+    !navLinks.contains(e.target) &&
+    !menuToggle.contains(e.target)
+  ) {
+    navLinks.classList.remove("active");
+    menuToggle.classList.remove("active");
+    document.body.classList.remove("menu-open");
+  }
+
+});
