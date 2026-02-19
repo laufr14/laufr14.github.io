@@ -13,16 +13,6 @@ body {
   overflow-x: hidden;
 }
 
-
-/* Text Alignment */
-.about-content p,
-.project-info p,
-.contact-info p,
-.skills-subtitle,
-.section-subtitle {
-  text-align: left;
-}
-
 /* Navbar */
 .navbar {
   display: flex;
@@ -183,7 +173,12 @@ body.menu-open {
   margin: 10px 0 20px;
 }
 
-
+.cursor {
+  display: inline-block;
+  background-color: #fff;
+  width: 2px;
+  animation: blink 0.7s infinite;
+}
 
 @keyframes blink {
   50% {
@@ -245,11 +240,8 @@ body.menu-open {
 /*Cursor animado*/
 .cursor {
   display: inline-block;
-  margin-left: 4px;
-  width: 2px;
-  height: 1em;
-  background: #fff;
-  animation: blink 0.8s infinite;
+  margin-left: 3px;
+  animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
@@ -262,7 +254,7 @@ body.menu-open {
 /*=====ABOUT ME====*/
 .section-title {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 50px;
   font-weight: 700;
 }
@@ -281,13 +273,9 @@ body.menu-open {
 /* Layout principal */
 .about-container {
   display: grid;
-  grid-template-columns: 380px 1fr; /* imagen + contenido */
-  gap: 80px;
+  grid-template-columns: 420px 1fr; /* imagen + contenido */
+  gap: 60px;
   align-items: center;
-}
-
-.about-content {
-  max-width: 560px;
 }
 
 /* Imagen */
@@ -436,9 +424,7 @@ body.menu-open {
 
 .project-card img {
 height: 230px;
-object-fit: contain;
-background: #0d0020;
-  padding: 10px;
+object-fit: cover;
 }
 
 .project-info {
@@ -548,29 +534,33 @@ background: #0d0020;
   border-radius: 50%;
 }
 
-/* ===== MODERN SKILLS LIST ===== */
+/* Skill bars */
+.skill-bar {
+  margin-bottom: 20px;
+  text-align: left;
+}
 
-.skill-list {
+.skill-bar p {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: flex-start;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
 }
 
-.skill-list span {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  transition: 0.3s ease;
+.bar {
+  background: #2c1848;
+  height: 8px;
+  border-radius: 50px;
+  overflow: hidden;
 }
 
-.skill-list span:hover {
+.bar span {
+  display: block;
+  height: 100%;
   background: linear-gradient(90deg, #ff66ff, #a020f0);
-  transform: translateY(-2px);
+  border-radius: 50px;
+  transition: width 1.2s ease;
 }
-
 
 /*Certifications*/
 
@@ -706,15 +696,6 @@ background: #0d0020;
   border-radius: 50%;
   padding: 10px;
   margin-right: 15px;
-}
-
-.project-info {
-  padding: 22px;
-}
-
-.project-info p {
-  line-height: 1.6;
-  margin-bottom: 12px;
 }
 
 /* Social */
