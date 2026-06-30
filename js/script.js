@@ -5,17 +5,17 @@ const currentLang = document.documentElement.lang;
 
 // Palabras en inglés y español
 const wordsEN = [
-  "Frontend Developer",
-  "Backend Developer",
-  "Full-Stack Developer",
-  "UI/UX Enthusiast"
+  "Frontend",
+  "Backend",
+  "Full-Stack",
+  "UI/UX"
 ];
 
 const wordsES = [
-  "Desarrolladora Frontend",
-  "Desarrolladora Backend",
-  "Desarrolladora Full-Stack",
-  "Entusiasta de UI/UX"
+  "Frontend",
+  "Backend",
+  "Full-Stack",
+  "UI/UX"
 ];
 
 // Seleccionar idioma
@@ -57,28 +57,52 @@ function typeEffect() {
 // Iniciar animación al cargar la página
 document.addEventListener("DOMContentLoaded", typeEffect);
 
-// Filtrado de proyectos
-const filters = document.querySelectorAll('.filter');
-  const cards = document.querySelectorAll('.project-card');
+//Filtrado de proyectos
 
-  filters.forEach(filter => {
-    filter.addEventListener('click', () => {
+const filters = document.querySelectorAll(".filter");
+const projects = document.querySelectorAll(
+    ".mini-project, .web-project-showcase"
+);
 
-      // Botón activo
-      filters.forEach(btn => btn.classList.remove('active'));
-      filter.classList.add('active');
+filters.forEach(button => {
 
-      const category = filter.dataset.filter;
+    button.addEventListener("click", () => {
 
-      cards.forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
+        filters.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        const category = button.dataset.filter;
+
+       projects.forEach(project => {
+
+    const projectCategory = project.dataset.category;
+
+    if (category === "all") {
+
+        project.style.display = "block";
+
+    }
+
+    else if (projectCategory === category) {
+
+        project.style.display = "block";
+
+    }
+
+    else {
+
+        project.style.display = "none";
+
+    }
+
+});
+
     });
-  });
+
+});
 
   //Script para el modal de solicitud de CV
 
