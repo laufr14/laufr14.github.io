@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", typeEffect);
 
 const filters = document.querySelectorAll(".filter");
 const projects = document.querySelectorAll(
-    ".mini-project, .web-project-showcase"
+      ".featured-project, .mini-project, .web-project-showcase"
 );
 
 filters.forEach(button => {
@@ -76,19 +76,19 @@ filters.forEach(button => {
 
         const category = button.dataset.filter;
 
-       projects.forEach(project => {
+      projects.forEach(project => {
 
     const projectCategory = project.dataset.category;
 
     if (category === "all") {
 
-        project.style.display = "block";
+        project.style.display = "";
 
     }
 
     else if (projectCategory === category) {
 
-        project.style.display = "block";
+        project.style.display = "";
 
     }
 
