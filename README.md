@@ -1,4 +1,4 @@
-# 👋 Laura Félix | Portfolio
+# 👋 Laura Felix | Portfolio
 
 Welcome to my personal portfolio repository.
 
