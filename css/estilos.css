@@ -796,6 +796,15 @@ display: inline-flex;
 
 }
 
+/*Google play icon*/
+
+.google-play-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
 .mini-project{
 
     background:white;
